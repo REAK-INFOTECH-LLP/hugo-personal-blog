@@ -1,0 +1,25 @@
+{
+  "name": "hugo-personal-blog",
+  "version": "1.0.0",
+  "description": "Personal Blog theme for Hugo SSG built with <3 by REAK INFOTECH LLP",
+  "main": "index.js",
+  "keywords": [
+    "personal",
+    "blog",
+    "hugo",
+    "reak",
+    "infotech",
+    "llp"
+  ],
+  "author": "REAK INFOTECH LLP",
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.9.1",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/style.scss themes/reak-blog/static/css/style.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  }
+}
