@@ -1,0 +1,18 @@
+<div class="column is-one-fifth">
+    <h2>Posts by Year</h2>
+    <div class="buttons">
+	{{ range $year, $post := .Site.Taxonomies.year }}
+	<a href="{{ .Page.RelPermalink }}" class="button">
+		<span class="is-left">{{ $year }}</span>
+	</a>
+	{{end}}
+    </div>
+    <h2>Posts by Tags</h2>
+    <div class="buttons">
+	{{ range $tags, $post := .Site.Taxonomies.tags }}
+	<a href="{{ .Page.RelPermalink }}" class="button">
+	    <span class="is-left">{{ $tags }}</span>
+	</a>
+	{{ end }}
+    </div>
+</div>

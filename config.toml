@@ -3,6 +3,17 @@ languageCode = "en-us"
 title = "Personal Blog"
 theme = "reak-blog"
 
+[taxonomies]
+year = "year"
+month = "month"
+tags = "tags"
+
+[permalinks]
+post = "/:year/:month/:slug/"
+year = "/:slug/"
+month = "/:slug/"
+tags = "/category/:slug"
+
 [params]
 blogName = "John Doe"
 blogDescription = "Personal Blog of John Doe"
