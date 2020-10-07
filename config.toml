@@ -1,4 +1,26 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Personal Blog"
 theme = "reak-blog"
+
+[params]
+blogName = "John Doe"
+blogDescription = "Personal Blog of John Doe"
+avatarURL = "https://bulma.io/images/placeholders/128x128.png"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    pre = "about"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 3
