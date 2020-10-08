@@ -13,10 +13,10 @@
                 {{ end }}
                 <div class="card-content">
                     <h1 class="title">{{ .Title }}</h1>
-                    <h2 class="subtitle content is-size-6">
+                    <h2 class="subtitle content is-size-6 pt-2">
                         {{ .Summary }}
                         <br>
-                        <time datetime="2016-1-1">{{ .Date.Format "January 2, 2006" }}</time>
+                        <div class="pt-4" datetime="2016-1-1"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</div>
                     </h2>
                 </div>
             </div>

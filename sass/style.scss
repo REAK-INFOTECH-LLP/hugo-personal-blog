@@ -1,5 +1,28 @@
 @charset "utf-8";
 
+* {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    position: relative;
+}
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
@@ -44,4 +67,4 @@ $footer-padding: 1.5rem 0.75rem 1rem;
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
-*/
+ */
