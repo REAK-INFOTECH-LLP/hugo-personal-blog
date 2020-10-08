@@ -1,3 +1,20 @@
 {{ define "main" }}
-Full Page Single Post
+<div class="column">
+    <div class="card">
+        {{ if .Params.HeaderImage }}    
+        <div class="card-image">
+            <figure class="image {{.Params.ImageAspectRatio}}">
+                <img src="{{.Params.ImageLink}}" alt="{{ .Params.ImageDesc }}">
+            </figure>
+        </div>
+        {{ end }}
+        <div class="card-content">
+            <h1 class="title">{{ .Title }}</h1>
+            <time datetime="2016-1-1">{{ .Date.Format "January 2, 2006" }}</time>
+            <h2 class="subtitle content is-size-6">
+                {{ .Content }}
+            </h2>
+        </div>
+    </div>
+</div>
 {{ end }}

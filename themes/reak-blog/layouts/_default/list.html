@@ -1,11 +1,28 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
-{{ end }}
+<div class="column">
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <div class="box">
+        <a href={{ .Permalink }}>
+            <div class="card">
+                {{ if .Params.HeaderImage }}    
+                <div class="card-image">
+                    <figure class="image {{.Params.ImageAspectRatio}}">
+                        <img src="{{.Params.ImageLink}}" alt="{{ .Params.ImageDesc }}">
+                    </figure>
+                </div>
+                {{ end }}
+                <div class="card-content">
+                    <h1 class="title">{{ .Title }}</h1>
+                    <h2 class="subtitle content is-size-6">
+                        {{ .Summary }}
+                        <br>
+                        <time datetime="2016-1-1">{{ .Date.Format "January 2, 2006" }}</time>
+                    </h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    {{ end }}
+</div>
+{{- partial "filters.html" . -}}
 {{ end }}
