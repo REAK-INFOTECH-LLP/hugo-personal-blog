@@ -7,12 +7,14 @@ theme = "reak-blog"
 year = "year"
 month = "month"
 tags = "tags"
+categories = "categories"
 
 [permalinks]
 post = "/:year/:month/:slug/"
 year = "/:slug/"
 month = "/:slug/"
-tags = "/category/:slug"
+tags = "/tag/:slug"
+categories = "/category/:slug"
 
 [params]
 blogName = "John Doe"
