@@ -8,6 +8,7 @@ imageDesc: "Header Image"
 draft: false
 year: "2014"
 month: "2014/11"
+categories: ["cat1","cat2"]
 tags: ["sample","first"]
 ---
 **Testing**
