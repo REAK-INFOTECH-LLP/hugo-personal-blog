@@ -1,6 +1,12 @@
 {{ define "main" }}
-    <div class="column">
-        Hello World Contact !
+<div class="column">
+    <div class="card">
+        <div class="card-content">
+            <h1 class="title">{{ .Title }}</h1>
+            <h2 class="subtitle content is-size-6 pt-4">
+                {{ .Content }}
+            </h2>
+        </div>
     </div>
+</div>
 {{ end }}
-

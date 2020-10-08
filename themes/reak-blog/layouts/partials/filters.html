@@ -11,7 +11,7 @@
     <div class="buttons">
 	{{ range $tags, $post := .Site.Taxonomies.tags }}
 	<a href="{{ .Page.RelPermalink }}" class="button">
-	    <span class="is-left">{{ $tags }}</span>
+	    <span class="is-left">{{ $tags | humanize }}</span>
 	</a>
 	{{ end }}
     </div>
