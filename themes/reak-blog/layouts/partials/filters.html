@@ -3,15 +3,15 @@
     <div class="buttons">
 	{{ range $year, $post := .Site.Taxonomies.year }}
 	<a href="{{ .Page.RelPermalink }}" class="button">
-		<span class="is-left">{{ $year }}</span>
+		<span>{{ $year }}</span>
 	</a>
 	{{end}}
     </div>
-    <h2>Posts by Tags</h2>
+    <h2>Posts by Category</h2>
     <div class="buttons">
-	{{ range $tags, $post := .Site.Taxonomies.tags }}
+	{{ range $category, $post := .Site.Taxonomies.categories }}
 	<a href="{{ .Page.RelPermalink }}" class="button">
-	    <span class="is-left">{{ $tags | humanize }}</span>
+	    <span>{{ $category | humanize }}</span>
 	</a>
 	{{ end }}
     </div>
