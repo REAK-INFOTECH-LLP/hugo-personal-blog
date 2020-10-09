@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="column">
-    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ range (.Paginator .Site.Params.PaginationLimit).Pages }}
     <div class="box">
         <a href={{ .Permalink }}>
             <div class="card">
@@ -13,16 +13,25 @@
                 {{ end }}
                 <div class="card-content">
                     <h1 class="title">{{ .Title }}</h1>
-                    <h2 class="subtitle content is-size-6">
+                    <h2 class="subtitle content is-size-6 pt-2">
                         {{ .Summary }}
-                        <br>
-                        <time datetime="2016-1-1">{{ .Date.Format "January 2, 2006" }}</time>
                     </h2>
+                    <div class="control">
+                    <div class="buttons are-small">
+                        {{ range $cat := .Params.Categories }}
+                        <a class="button is-success p-2 mt-4 mb-5">
+                            {{ $cat | humanize }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    </div>
+                    <time datetime="2016-1-1"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</time>
                 </div>
             </div>
         </a>
     </div>
     {{ end }}
+    {{- partial "pagination.html" . }}
 </div>
 {{- partial "filters.html" . -}}
 {{ end }}

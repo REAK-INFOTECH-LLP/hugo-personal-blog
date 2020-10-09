@@ -10,10 +10,27 @@
         {{ end }}
         <div class="card-content">
             <h1 class="title">{{ .Title }}</h1>
-            <time datetime="2016-1-1">{{ .Date.Format "January 2, 2006" }}</time>
+            <div class="buttons are-small">
+                {{ range $cat := .Params.Categories }}
+                <a class="button is-success p-2">
+                    {{ $cat | humanize }}
+                </a>
+                {{ end }}
+            </div>
+            <div class="pb-6">
+                <time datetime="2016-1-1"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</time>
+            </div>
             <h2 class="subtitle content is-size-6">
                 {{ .Content }}
             </h2>
+            <div class="tags">
+                <span class="pr-3">
+                    <i class="fas fa-tags"></i>
+                </span>
+                {{ range .GetTerms "tags" }}
+                <a class="tag" href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a>
+                {{ end }}
+            </div>
         </div>
     </div>
 </div>
