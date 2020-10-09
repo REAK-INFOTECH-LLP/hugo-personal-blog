@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="column">
-    {{ range first .Site.Params.PostsOnHome .Site.RegularPages }}
+    {{ range first .Site.Params.MaxPostsHomePage (.Paginator .Site.Params.PaginationLimit).Pages }}
     <div class="box">
         <a href={{ .Permalink }}>
             <div class="card">
@@ -31,6 +31,7 @@
         </a>
     </div>
     {{ end }}
+    {{- partial "pagination.html" . }}
 </div>
 {{- partial "filters.html" . -}}
 {{ end }}

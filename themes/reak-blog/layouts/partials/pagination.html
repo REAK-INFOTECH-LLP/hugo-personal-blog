@@ -1,11 +1,12 @@
-<nav class="pagination" role="navigation" aria-label="pagination">
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <ul class="pagination-list">
-        {{ range .Paginator.Pagers }}
+        {{ range $paginator.Pagers }}
         <li>
-            <a href="{{ .Prev }}" class="pagination-previous">Previous</a>
-            <a href="{{ .Paginator.Next.URL }}" class="pagination-next">Next page</a>
-            <a href="{{ .URL }}" class="pagination-link" aria-label="Page {{ .PageNumber }}">{{ .PageNumber }}</a>
+            <a href="{{ .URL }}" class="pagination-link{{ if eq .PageNumber $paginator.PageNumber }} is-current{{ end }}" aria-label="Page {{ .PageNumber }}" {{ if eq .PageNumber $paginator.PageNumber }}aria-current="page"{{ end }}>{{ .PageNumber }}</a>
         </li>
         {{ end }}
     </ul>
 </nav>
+{{ end }}

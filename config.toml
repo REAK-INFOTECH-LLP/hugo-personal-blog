@@ -20,7 +20,8 @@ categories = "/category/:slug"
 blogName = "John Doe"
 blogDescription = "Personal Blog of John Doe"
 avatarURL = "https://bulma.io/images/placeholders/128x128.png"
-postsOnHome = 10
+paginationLimit = "2"
+maxPostsHomePage = "100"
 
 [menu]
   [[menu.main]]
