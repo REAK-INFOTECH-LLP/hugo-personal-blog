@@ -1,0 +1,11 @@
+<nav class="pagination" role="navigation" aria-label="pagination">
+    <ul class="pagination-list">
+        {{ range .Paginator.Pagers }}
+        <li>
+            <a href="{{ .Prev }}" class="pagination-previous">Previous</a>
+            <a href="{{ .Paginator.Next.URL }}" class="pagination-next">Next page</a>
+            <a href="{{ .URL }}" class="pagination-link" aria-label="Page {{ .PageNumber }}">{{ .PageNumber }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>

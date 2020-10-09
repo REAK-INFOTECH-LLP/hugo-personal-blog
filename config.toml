@@ -20,6 +20,7 @@ categories = "/category/:slug"
 blogName = "John Doe"
 blogDescription = "Personal Blog of John Doe"
 avatarURL = "https://bulma.io/images/placeholders/128x128.png"
+postsOnHome = 10
 
 [menu]
   [[menu.main]]
