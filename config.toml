@@ -19,7 +19,6 @@ categories = "/category/:slug"
 [params]
 blogName = "John Doe"
 blogSubtitle = "Personal Blog of John Doe"
-blogDescription = "Yo it's ya boi Bobo Dakes, I need that album sent to me asap."
 avatarURL = "https://bulma.io/images/placeholders/128x128.png"
 paginationLimit = "2"
 maxPostsHomePage = "100"
@@ -46,18 +45,14 @@ maxPostsHomePage = "100"
     url = "/archive/"
     weight = 4
   [[menu.social]]
-    name = "LinkedIn"
-    icon = "linkedin"
+    name = "linkedin"
     url = "https://reak.in"
   [[menu.social]]
-    name = "GitHub"
-    icon = "github"
+    name = "github"
     url = "https://reak.in"
   [[menu.social]]
-    name = "Twitter"
-    icon = "twitter"
+    name = "twitter"
     url = "https://reak.in"
   [[menu.social]]
-    name = "Facebook"
-    icon = "facebook"
+    name = "facebook"
     url = "https://reak.in"

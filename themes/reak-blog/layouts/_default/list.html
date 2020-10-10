@@ -1,5 +1,6 @@
 {{ define "main" }}
 <div class="column">
+    <div class="container">
     {{ range (.Paginator .Site.Params.PaginationLimit).Pages }}
     <div class="box">
         <a href={{ .Permalink }}>
@@ -19,7 +20,7 @@
                     <div class="control">
                     <div class="buttons">
                         {{ range $cat := .Params.Categories }}
-                        <a class="button is-rounded is-small post-category p-2 mt-4 mb-5">
+                        <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2 mt-4 mb-5">
                             {{ $cat | humanize }}
                         </a>
                         {{ end }}
@@ -32,6 +33,7 @@
     </div>
     {{ end }}
     {{- partial "pagination.html" . }}
+</div>
 </div>
 {{- partial "filters.html" . -}}
 {{ end }}

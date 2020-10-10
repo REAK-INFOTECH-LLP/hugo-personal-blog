@@ -1,9 +1,9 @@
 <div class="column is-one-fifth is-centered">
-    <div class="sticky">
+    <div class="container sticky">
         <h1 class="title is-5">Posts by Year</h1>
         <div class="buttons">
             {{ range $year, $post := .Site.Taxonomies.year }}
-            <a href="{{ .Page.RelPermalink }}" class="button is-rounded filter-year">
+            <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey has-text-white">
                 <span>{{ $year }}</span>
             </a>
             {{end}}
@@ -11,7 +11,7 @@
         <h1 class="title is-5">Posts by Category</h1>
         <div class="buttons">
             {{ range $category, $post := .Site.Taxonomies.categories }}
-            <a href="{{ .Page.RelPermalink }}" class="button is-rounded filter-category">
+            <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey-dark has-text-white">
                 <span>{{ $category | humanize }}</span>
             </a>
             {{ end }}

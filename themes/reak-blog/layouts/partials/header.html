@@ -1,16 +1,15 @@
 <div class="column is-one-fifth">
-    <div class="has-text-centered sticky">
+    <div class="container has-text-centered sticky">
         <figure class="image is-128x128 is-inline-block mb-6">
             <img class="is-rounded" alt="{{.Site.Params.blogName}} Avatar"
                                     src="{{.Site.Params.AvatarURL}}">
         </figure>
         <h1 class="title is-2">{{.Site.Params.BlogName}}</h1>
-        <h2 class="subtitle is-4">{{.Site.Params.BlogSubtitle}}</h2>
-        <p class="mb-6 is-size-5">{{.Site.Params.BlogDescription}}</p>
+        <h2 class="subtitle is-4 mb-6">{{.Site.Params.BlogSubtitle}}</h2>
         <aside class="menu">
             <ul class="menu-list">
                 {{ range .Site.Menus.main }}
-                <li class="is-size-5"><a href="{{.URL | safeHTML}}">
+                <li class="is-size-5 has-text-justified"><a href="{{.URL | safeHTML}}">
                         {{ if eq .Name "Home" }}<i class="fas fa-home"></i>{{ end }}
                         {{ if eq .Name "About" }}<i class="far fa-address-card"></i>{{ end }}
                         {{ if eq .Name "Contact" }}<i class="far fa-envelope"></i>{{ end }}
@@ -19,14 +18,14 @@
                 {{ end }}
             </ul>
         </aside>
-        <nav class="level mt-6 is-size-3 has-text-black">
+        <div class="level mt-6 is-size-3">
             {{ range .Site.Menus.social }}
             <div class="level-item has-text-centered">
-                <a class="panel-block">
-                    <i class="fab fa-{{ .Icon }}"></i>
+                <a href={{.URL}} target="_blank" class="has-text-grey-dark">
+                    <i class="fab fa-{{ .Name }}"></i>
                 </a>
             </div>
             {{ end }}
-        </nav>
+        </div>
     </div>
 </div>

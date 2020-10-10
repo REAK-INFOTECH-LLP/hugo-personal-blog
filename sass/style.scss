@@ -5,7 +5,7 @@
 
 
 .main-container {
-    min-height: 90vh; /* will cover the 100% of viewport */
+    min-height: 100vh; /* will cover the 100% of viewport */
 }
 
 // Sticky Class
@@ -38,6 +38,10 @@ footer {
     height: 10vh;
     //border-top: solid 5px red;
 }
+
+
+// Bulma Personalization
+$link: #7a7a7a;
 
 // Import all
 @import "../node_modules/bulma/bulma.sass";

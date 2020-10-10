@@ -1,5 +1,6 @@
 {{ define "main" }}
 <div class="column">
+    <div class="container">
     <div class="card">
         {{ if .Params.HeaderImage }}    
         <div class="card-image">
@@ -12,7 +13,7 @@
             <h1 class="title">{{ .Title }}</h1>
             <div class="buttons">
                 {{ range .GetTerms "categories" }}
-                <a class="button is-rounded is-small post-category p-2" href="{{ .Permalink }}">
+                <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2" href="{{ .Permalink }}">
                     {{ .LinkTitle | humanize }}
                 </a>
                 {{ end }}
@@ -33,6 +34,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <div class="column is-one-fifth">
 </div>
