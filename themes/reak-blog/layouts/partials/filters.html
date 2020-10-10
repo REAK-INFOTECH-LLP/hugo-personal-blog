@@ -1,18 +1,20 @@
-<div class="column is-one-fifth">
-    <h2>Posts by Year</h2>
-    <div class="buttons">
-	{{ range $year, $post := .Site.Taxonomies.year }}
-	<a href="{{ .Page.RelPermalink }}" class="button">
-		<span>{{ $year }}</span>
-	</a>
-	{{end}}
-    </div>
-    <h2>Posts by Category</h2>
-    <div class="buttons">
-	{{ range $category, $post := .Site.Taxonomies.categories }}
-	<a href="{{ .Page.RelPermalink }}" class="button">
-	    <span>{{ $category | humanize }}</span>
-	</a>
-	{{ end }}
+<div class="column is-one-fifth is-centered">
+    <div class="sticky">
+        <h2>Posts by Year</h2>
+        <div class="buttons">
+            {{ range $year, $post := .Site.Taxonomies.year }}
+            <a href="{{ .Page.RelPermalink }}" class="button">
+                <span>{{ $year }}</span>
+            </a>
+            {{end}}
+        </div>
+        <h2>Posts by Category</h2>
+        <div class="buttons">
+            {{ range $category, $post := .Site.Taxonomies.categories }}
+            <a href="{{ .Page.RelPermalink }}" class="button">
+                <span>{{ $category | humanize }}</span>
+            </a>
+            {{ end }}
+        </div>
     </div>
 </div>

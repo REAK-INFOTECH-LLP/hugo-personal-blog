@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="column">
+<div class="column blog-content">
     {{ range first .Site.Params.MaxPostsHomePage (.Paginator .Site.Params.PaginationLimit).Pages }}
     <div class="box">
         <a href={{ .Permalink }}>
@@ -35,3 +35,4 @@
 </div>
 {{- partial "filters.html" . -}}
 {{ end }}
+

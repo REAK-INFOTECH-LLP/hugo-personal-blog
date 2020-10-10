@@ -2,15 +2,13 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
-        <div class="main-container">
-            <section class="section">
-                <div class="columns">
-                    {{- partial "header.html" . -}}
-                    {{- block "main" . }}{{- end }}
-                </div>
-            </section>
-            {{- partial "footer.html" . -}}
-        </div>
+        <section class="section main-container">
+            <div class="columns">
+                {{- partial "header.html" . -}}
+                {{- block "main" . }}{{- end }}
+            </div>
+        </section>
+        {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}
     </body>
 </html>
