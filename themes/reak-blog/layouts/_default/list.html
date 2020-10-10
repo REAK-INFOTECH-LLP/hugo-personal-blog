@@ -17,15 +17,15 @@
                         {{ .Summary }}
                     </h2>
                     <div class="control">
-                    <div class="buttons are-small">
+                    <div class="buttons">
                         {{ range $cat := .Params.Categories }}
-                        <a class="button is-success p-2 mt-4 mb-5">
+                        <a class="button is-rounded is-small post-category p-2 mt-4 mb-5">
                             {{ $cat | humanize }}
                         </a>
                         {{ end }}
                     </div>
                     </div>
-                    <time datetime="2016-1-1"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</time>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</time>
                 </div>
             </div>
         </a>
