@@ -3,6 +3,11 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
+// Expand Container to full width
+.main-container {
+    min-height: 100vh;
+}
+
 // Sticky Class
 .sticky {
     position: fixed;
