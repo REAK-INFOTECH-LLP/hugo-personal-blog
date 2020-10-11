@@ -18,4 +18,3 @@ deploy:
   local_dir: ../website
   on:
     branch: master
-  fqdn: ashishsaxena.net
