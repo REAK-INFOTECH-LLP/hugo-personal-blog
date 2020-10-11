@@ -2,17 +2,17 @@
     <div class="container sticky">
         <h1 class="title is-5">Posts by Year</h1>
         <div class="buttons">
-            {{ range $year, $post := .Site.Taxonomies.year }}
+            {{ range .Site.Taxonomies.year }}
             <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey has-text-white">
-                <span>{{ $year }}</span>
+                <span>{{ .Page.Title }}</span>
             </a>
             {{end}}
         </div>
         <h1 class="title is-5">Posts by Category</h1>
         <div class="buttons">
-            {{ range $category, $post := .Site.Taxonomies.categories }}
+            {{ range .Site.Taxonomies.categories }}
             <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey-dark has-text-white">
-                <span>{{ $category | humanize }}</span>
+                <span>{{ .Page.Title | humanize }}</span>
             </a>
             {{ end }}
         </div>
