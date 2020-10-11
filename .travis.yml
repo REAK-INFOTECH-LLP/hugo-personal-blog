@@ -17,5 +17,5 @@ deploy:
   keep_history: false
   local_dir: ../website
   on:
-    branch: master
+    branch: main
   fqdn: ashishsaxena.net
