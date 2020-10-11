@@ -1,6 +1,6 @@
-baseURL = "https://reak-infotech-llp.github.io/hugo-personal-blog/"
+baseURL = "http://ashishsaxena.net"
 languageCode = "en-us"
-title = "Personal Blog"
+title = "Ashish Saxena's Personal Website"
 theme = "reak-blog"
 
 [taxonomies]
@@ -17,10 +17,10 @@ tags = "/tag/:slug"
 categories = "/category/:slug"
 
 [params]
-blogName = "John Doe"
-blogSubtitle = "Personal Blog of John Doe"
-avatarURL = "https://bulma.io/images/placeholders/128x128.png"
-paginationLimit = "2"
+blogName = "Ashish Saxena"
+blogSubtitle = "My personal website and random ramblings"
+avatarURL = "images/profile.png"
+paginationLimit = "10"
 maxPostsHomePage = "100"
 
 [menu]
@@ -46,13 +46,13 @@ maxPostsHomePage = "100"
     weight = 4
   [[menu.social]]
     name = "linkedin"
-    url = "https://reak.in"
+    url = "https://www.linkedin.com/in/ashishsaxena5/"
   [[menu.social]]
     name = "github"
-    url = "https://reak.in"
+    url = "https://github.com/eclipsed-ninja/"
   [[menu.social]]
     name = "twitter"
-    url = "https://reak.in"
+    url = "https://twitter.com/eclipsed_ninja"
   [[menu.social]]
     name = "facebook"
-    url = "https://reak.in"
+    url = "https://www.facebook.com/saxena.ashish55/"
