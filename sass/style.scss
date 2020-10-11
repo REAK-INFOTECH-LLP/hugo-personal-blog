@@ -3,11 +3,6 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-
-.main-container {
-    min-height: 100vh; /* will cover the 100% of viewport */
-}
-
 // Sticky Class
 .sticky {
     position: fixed;
@@ -32,13 +27,6 @@ $box-padding: 0px;
 // Footer Adjustments
 $footer-padding: 1.5rem 0rem 1rem;
 $footer-background-color: rgba(255,255,255,0);
-
-// Generic Divider Configuration
-footer {
-    height: 10vh;
-    //border-top: solid 5px red;
-}
-
 
 // Bulma Personalization
 $link: #7a7a7a;
