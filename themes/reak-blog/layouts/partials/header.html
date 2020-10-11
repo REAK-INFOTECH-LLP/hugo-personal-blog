@@ -5,7 +5,7 @@
                                     src="{{.Site.Params.AvatarURL}}">
         </figure>
         <h1 class="title is-2">{{.Site.Params.BlogName}}</h1>
-        <h2 class="subtitle is-4 mb-6">{{.Site.Params.BlogSubtitle}}</h2>
+        <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.BlogSubtitle}}</h2>
         <aside class="menu">
             <ul class="menu-list">
                 {{ range .Site.Menus.main }}
@@ -26,6 +26,12 @@
                 </a>
             </div>
             {{ end }}
+        </div>
+        <div class="content has-text-centered mt-6">
+            <p class="">
+                <a href="https://reak.in" class="has-text-grey-dark">Crafted with <i class="fa fa-heart has-text-danger-dark"></i> @ REAK</a>
+                <br /><i class="far fa-copyright"></i> {{ now.Format "2006" }} - {{ .Site.Params.BlogName }}
+            </p>
         </div>
     </div>
 </div>
