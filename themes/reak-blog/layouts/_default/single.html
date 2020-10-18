@@ -5,7 +5,7 @@
         {{ if .Params.HeaderImage }}    
         <div class="card-image">
             <figure class="image {{.Params.ImageAspectRatio}}">
-                <img src="{{.Params.ImageLink}}" alt="{{ .Params.ImageDesc }}">
+                <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
             </figure>
         </div>
         {{ end }}

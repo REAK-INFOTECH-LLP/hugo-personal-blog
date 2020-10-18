@@ -3,7 +3,7 @@ title: "Start Your Own Website / Blog in 60 Seconds for Free"
 date: 2020-10-12T01:12:39+05:30
 headerImage: true
 imageAspectRatio: "is-16by9"
-imageLink: "images/personal-blog-screenshot.png"
+images: ["images/personal-blog-screenshot.png"]
 imageDesc: "Setup your own website / blog for Free"
 draft: false
 year: "2020"
