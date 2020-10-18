@@ -1,5 +1,6 @@
 ---
 title: "Start Your Own Website / Blog in 60 Seconds for Free"
+description: "Get your own website / blog setup for free in less than 60 seconds"
 date: 2020-10-12T01:12:39+05:30
 headerImage: true
 imageAspectRatio: "is-16by9"
