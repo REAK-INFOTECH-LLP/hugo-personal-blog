@@ -5,6 +5,7 @@
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>
+    {{ partial "meta.html" . }}
     <link href="css/style.css" rel="stylesheet" />
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     {{ template "_internal/opengraph.html" . }}
