@@ -2,6 +2,7 @@ baseURL = "https://reak-infotech-llp.github.io/hugo-personal-blog/"
 languageCode = "en-us"
 title = "Personal Blog"
 theme = "reak-blog"
+enableRobotsTXT = "true"
 
 [taxonomies]
 year = "year"
