@@ -4,6 +4,7 @@ title = "Ashish Saxena's Personal Website"
 theme = "reak-blog"
 enableRobotsTXT = "true"
 
+
 [taxonomies]
 year = "year"
 month = "month"
@@ -18,11 +19,12 @@ tags = "/tag/:slug"
 categories = "/category/:slug"
 
 [params]
-blogName = "Ashish Saxena"
-blogSubtitle = "My personal website and random ramblings"
-avatarURL = "images/profile.png"
+title = "Ashish Saxena"
+description = "My personal website and random ramblings"
+images = ["images/profile.png"]
 paginationLimit = "10"
 maxPostsHomePage = "100"
+
 
 [menu]
   [[menu.main]]
