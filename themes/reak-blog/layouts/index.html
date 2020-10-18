@@ -13,10 +13,10 @@
                 </div>
                 {{ end }}
                 <div class="card-content">
-                    <h1 class="title is-size-3">{{ .Title }}</h1>
-                    <h2 class="subtitle content is-size-6 pt-2">
+                    <h3 class="title is-size-3">{{ .Title }}</h3>
+                    <h4 class="subtitle content is-size-6 pt-2">
                         {{ .Summary }}
-                    </h2>
+                    </h4>
                     <div class="control">
                     <div class="buttons">
                         {{ range .GetTerms "categories" }}
