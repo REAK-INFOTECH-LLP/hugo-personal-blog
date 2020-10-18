@@ -7,4 +7,6 @@
     <title>{{ $title }}</title>
     <link href="css/style.css" rel="stylesheet" />
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
 </head>

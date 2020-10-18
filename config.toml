@@ -4,6 +4,7 @@ title = "Personal Blog"
 theme = "reak-blog"
 enableRobotsTXT = "true"
 
+
 [taxonomies]
 year = "year"
 month = "month"
@@ -18,11 +19,12 @@ tags = "/tag/:slug"
 categories = "/category/:slug"
 
 [params]
-blogName = "John Doe"
-blogSubtitle = "Personal Blog of John Doe"
-avatarURL = "https://bulma.io/images/placeholders/128x128.png"
+title = "John Doe"
+description = "Personal Blog of John Doe"
+images = ["https://bulma.io/images/placeholders/128x128.png"]
 paginationLimit = "2"
 maxPostsHomePage = "100"
+
 
 [menu]
   [[menu.main]]

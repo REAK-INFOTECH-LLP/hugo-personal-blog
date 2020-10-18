@@ -1,11 +1,11 @@
 <div class="column is-one-fifth">
     <div class="container has-text-centered sticky">
         <figure class="image is-128x128 is-inline-block mb-6">
-            <img class="is-rounded" alt="{{.Site.Params.blogName}} Avatar"
-                                    src="{{.Site.Params.AvatarURL}}">
+            <img class="is-rounded" alt="{{.Site.Params.title}} Avatar"
+                                    src="{{index .Site.Params.Images 0}}">
         </figure>
-        <h1 class="title is-2">{{.Site.Params.BlogName}}</h1>
-        <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.BlogSubtitle}}</h2>
+        <h1 class="title is-2">{{.Site.Params.title}}</h1>
+        <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h2>
         <aside class="menu">
             <ul class="menu-list">
                 {{ range .Site.Menus.main }}
