@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Personal Blog"
 theme = "reak-blog"
 enableRobotsTXT = "true"
-
+googleAnalytics = "UA-123-45"
 
 [taxonomies]
 year = "year"
