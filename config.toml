@@ -2,6 +2,7 @@ baseURL = "https://ashishsaxena.net"
 languageCode = "en-us"
 title = "Ashish Saxena's Personal Website"
 theme = "reak-blog"
+enableRobotsTXT = "true"
 
 [taxonomies]
 year = "year"
