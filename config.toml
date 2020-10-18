@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Ashish Saxena's Personal Website"
 theme = "reak-blog"
 enableRobotsTXT = "true"
-googleAnalytics = "UA-123-45"
+googleAnalytics = "UA-180784437-1"
 
 [taxonomies]
 year = "year"
