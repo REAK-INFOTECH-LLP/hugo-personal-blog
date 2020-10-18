@@ -1,7 +1,9 @@
-<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
-<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
-<meta name="description" content="{{ .Params.description }}" />
-<meta itemprop="description" content="{{ .Params.description }}" />
+{{ $title := print .Site.Title " | " .Title }}
+{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+<meta itemprop="name" content="{{ $title }}" />
+<meta name="application-name" content="{{ $title }}" />
+<meta name="description" content="{{ .Params.Description }}" />
+<meta itemprop="description" content="{{ .Params.Description }}" />
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
 <meta name="url" content="{{ .Permalink }}" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" /> 
