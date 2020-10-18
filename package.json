@@ -18,7 +18,7 @@
     "node-sass": "^4.14.1"
   },
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url sass/style.scss themes/reak-blog/static/css/style.css",
+    "css-build": "node-sass --omit-source-map-url sass/style.scss themes/reak-blog/static/css/style.css --output-style compressed",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch"
   }

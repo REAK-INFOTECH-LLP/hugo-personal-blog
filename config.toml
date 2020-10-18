@@ -2,12 +2,15 @@ baseURL = "https://reak-infotech-llp.github.io/hugo-personal-blog/"
 languageCode = "en-us"
 title = "Personal Blog"
 theme = "reak-blog"
+enableRobotsTXT = "true"
+googleAnalytics = "UA-123-45"
 
 [taxonomies]
 year = "year"
 month = "month"
 tags = "tags"
 categories = "categories"
+series = "series"
 
 [permalinks]
 post = "/:year/:month/:slug/"
@@ -17,11 +20,12 @@ tags = "/tag/:slug"
 categories = "/category/:slug"
 
 [params]
-blogName = "John Doe"
-blogSubtitle = "Personal Blog of John Doe"
-avatarURL = "https://bulma.io/images/placeholders/128x128.png"
+title = "John Doe"
+description = "Personal Blog of John Doe"
+images = ["https://bulma.io/images/placeholders/128x128.png"]
 paginationLimit = "2"
 maxPostsHomePage = "100"
+
 
 [menu]
   [[menu.main]]
