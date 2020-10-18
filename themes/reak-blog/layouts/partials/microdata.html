@@ -1,5 +1,5 @@
 {{ $author :=  .Site.Params.Title }}
-{{ if in .Permalink "/posts/" }}
+{{ if eq .Section "posts" }}
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",

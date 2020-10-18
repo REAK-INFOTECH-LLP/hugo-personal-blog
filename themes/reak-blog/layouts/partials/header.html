@@ -4,7 +4,7 @@
             <img class="is-rounded" alt="{{.Site.Params.title}} Avatar"
                                     src="{{index .Site.Params.Images 0}}">
         </figure>
-        {{ if in .Permalink "/posts/" }}
+        {{ if eq .Section "posts" }}
         <!--
             Okay, so what I am trying to do here is basically change the left panel header config when in single blog post view mode,
             as for SEO it should tag what's there in the blog rather than what the website is called.
