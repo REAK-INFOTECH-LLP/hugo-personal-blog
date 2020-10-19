@@ -3,12 +3,12 @@
     <div class="container">
     {{ range first .Site.Params.MaxPostsHomePage (.Paginator .Site.Params.PaginationLimit).Pages }}
     <div class="box">
-        <a href={{ .Permalink }}>
+        <a href={{ .Permalink }} title="{{ .Title }}">
             <div class="card">
                 {{ if .Params.HeaderImage }}    
                 <div class="card-image">
                     <figure class="image {{.Params.ImageAspectRatio}}">
-                        <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
+                        <img loading="lazy" src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
                     </figure>
                 </div>
                 {{ end }}
@@ -20,7 +20,7 @@
                     <div class="control">
                     <div class="buttons">
                         {{ range .GetTerms "categories" }}
-                        <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2 mt-4 mb-5" href="{{ .Permalink }}">
+                        <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2 mt-4 mb-5" href="{{ .Permalink }}" title="{{ .LinkTitle | humanize }}">
                             {{ .LinkTitle | humanize }}
                             </a>
                         {{ end }}

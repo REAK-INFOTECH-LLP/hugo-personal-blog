@@ -3,12 +3,12 @@
     <div class="container">
     {{ range (.Paginator .Site.Params.PaginationLimit).Pages }}
     <div class="box">
-        <a href={{ .Permalink }}>
+        <a href={{ .Permalink }} title="{{ .Title }}">
             <div class="card">
                 {{ if .Params.HeaderImage }}    
                 <div class="card-image">
                     <figure class="image {{.Params.ImageAspectRatio}}">
-                        <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
+                        <img loading="lazy" src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
                     </figure>
                 </div>
                 {{ end }}
@@ -20,7 +20,7 @@
                     <div class="control">
                     <div class="buttons">
                         {{ range $cat := .Params.Categories }}
-                        <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2 mt-4 mb-5">
+                        <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2 mt-4 mb-5" title="{{ $cat | humanize }}">
                             {{ $cat | humanize }}
                         </a>
                         {{ end }}

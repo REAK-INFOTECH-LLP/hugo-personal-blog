@@ -3,7 +3,7 @@
         <h6 class="title is-5">Posts by Year</h6>
         <div class="buttons">
             {{ range .Site.Taxonomies.year }}
-            <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey has-text-white">
+            <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey has-text-white" title="{{ .Page.Title }}">
                 <span>{{ .Page.Title }}</span>
             </a>
             {{end}}
@@ -11,7 +11,7 @@
         <h6 class="title is-5">Posts by Category</h6>
         <div class="buttons">
             {{ range .Site.Taxonomies.categories }}
-            <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey-dark has-text-white">
+            <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey-dark has-text-white" title="{{ .Page.Title | humanize }}">
                 <span>{{ .Page.Title | humanize }}</span>
             </a>
             {{ end }}

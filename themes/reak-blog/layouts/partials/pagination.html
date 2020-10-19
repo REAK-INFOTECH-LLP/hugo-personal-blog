@@ -4,7 +4,7 @@
     <ul class="pagination-list">
         {{ range $paginator.Pagers }}
         <li>
-            <a href="{{ .URL }}" class="pagination-link{{ if eq .PageNumber $paginator.PageNumber }} is-current{{ end }}" aria-label="Page {{ .PageNumber }}" {{ if eq .PageNumber $paginator.PageNumber }}aria-current="page"{{ end }}>{{ .PageNumber }}</a>
+            <a href="{{ .URL }}" class="pagination-link{{ if eq .PageNumber $paginator.PageNumber }} is-current{{ end }}" aria-label="Page {{ .PageNumber }}" title="page number {{ .PageNumber }}" {{ if eq .PageNumber $paginator.PageNumber }}aria-current="page"{{ end }}>{{ .PageNumber }}</a>
         </li>
         {{ end }}
     </ul>

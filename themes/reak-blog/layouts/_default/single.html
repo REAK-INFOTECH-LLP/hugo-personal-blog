@@ -5,7 +5,7 @@
         {{ if .Params.HeaderImage }}    
         <div class="card-image">
             <figure class="image {{.Params.ImageAspectRatio}}">
-                <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
+                <img loading="lazy" src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
             </figure>
         </div>
         {{ end }}
@@ -13,7 +13,7 @@
             <h1 class="title">{{ .Title }}</h1>
             <div class="buttons">
                 {{ range .GetTerms "categories" }}
-                <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2" href="{{ .Permalink }}">
+                <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2" href="{{ .Permalink }}" title="{{ .LinkTitle | humanize }}">
                     {{ .LinkTitle | humanize }}
                 </a>
                 {{ end }}
@@ -29,7 +29,7 @@
                     <i class="fas fa-tags"></i>
                 </span>
                 {{ range .GetTerms "tags" }}
-                <a class="tag" href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a>
+                <a class="tag" href="{{ .Permalink }}" title="{{ .LinkTitle | humanize }}">{{ .LinkTitle | humanize }}</a>
                 {{ end }}
             </div>
         </div>
