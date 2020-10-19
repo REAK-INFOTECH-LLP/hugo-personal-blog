@@ -1,6 +1,6 @@
 baseURL = "https://ashishsaxena.net"
 languageCode = "en-us"
-title = "Ashish Saxena Website - My corner of the internet"
+title = "Ashish Saxena - My personal thoughts, ideas and rants"
 theme = "reak-blog"
 enableRobotsTXT = "true"
 googleAnalytics = "UA-180784437-1"
@@ -21,8 +21,8 @@ categories = "/category/:slug"
 
 [params]
 title = "Ashish Saxena"
-seodescription = "Ashish Saxena, Founder REAK INFOTECH LLP. My personal website, My corner of the internet"
-description = "My corner of the internet"
+seodescription = "It's my personal website, which I use as a public journal on the internet to jot down my personal ideas, findings and rants. I'm Ashish Saxena, founder of REAK INFOTECH LLP."
+description = "My personal thoughts, ideas and rants"
 images = ["images/profile.png"]
 paginationLimit = "10"
 maxPostsHomePage = "100"
