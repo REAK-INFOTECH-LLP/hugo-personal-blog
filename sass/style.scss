@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
 // Expand Container to full width
 .main-container {
@@ -40,11 +40,24 @@ $link: #7a7a7a;
 @import "../node_modules/bulma/bulma.sass";
 // Import only what you need from Bulma
 /*
-@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass";
+@import "../node_modules/bulma/sass/utilities/controls.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/tag.sass";
+@import "../node_modules/bulma/sass/form/shared.sass";
+@import "../node_modules/bulma/sass/form/tools.sass";
+@import "../node_modules/bulma/sass/form/input-textarea.sass";
 @import "../node_modules/bulma/sass/components/card.sass";
 @import "../node_modules/bulma/sass/components/pagination.sass";
-@import "../node_modules/bulma/sass/elements/_all.sass";
-@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/components/level.sass";
+@import "../node_modules/bulma/sass/components/menu.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
 */
