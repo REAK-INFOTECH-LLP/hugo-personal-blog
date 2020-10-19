@@ -4,20 +4,20 @@
             <img class="is-rounded" alt="{{.Site.Params.title}} Avatar"
                                     src="{{index .Site.Params.Images 0}}">
         </figure>
-        {{ if eq .Section "posts" }}
+        {{ if .IsHome }}
         <!--
             Okay, so what I am trying to do here is basically change the left panel header config when in single blog post view mode,
             as for SEO it should tag what's there in the blog rather than what the website is called.
         -->
-        <h3 class="title is-2">{{.Site.Params.title}}</h3>
-        <h4 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h4>
+        <h1 class="title is-2">{{.Site.Params.title}}</h1>
+        <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h2>
         {{ else }}
         <!--
             When not in single view mode, it's a group of blog posts that are being showcased and since there cannot be multiple h1,
             I am changing primary headings to website title and description
         -->
-        <h1 class="title is-2">{{.Site.Params.title}}</h1>
-        <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h2>
+        <h3 class="title is-2">{{.Site.Params.title}}</h3>
+        <h4 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h4>
         {{ end }}
         <aside class="menu">
             <ul class="menu-list">

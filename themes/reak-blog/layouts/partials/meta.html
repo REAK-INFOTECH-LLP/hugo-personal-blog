@@ -2,8 +2,8 @@
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 <meta itemprop="name" content="{{ $title }}" />
 <meta name="application-name" content="{{ $title }}" />
-<meta name="description" content="{{ .Params.Description }}" />
-<meta itemprop="description" content="{{ .Params.Description }}" />
+<meta name="description" content="{{ .Site.Params.Description }}" />
+<meta itemprop="description" content="{{ .Site.Params.Description }}" />
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
 <meta name="url" content="{{ .Permalink }}" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" /> 
