@@ -19,7 +19,7 @@
               {{ range (where .Pages "Type" "posts") }}
                 {{ if (ne .Params.hidden true) }}
                   <li>
-                    <a class="is-block" href="{{ .RelPermalink }}" title="{{ .Date.Format '02 Jan' }} - {{ .Title }}">
+                    <a class="is-block" href="{{ .RelPermalink }}" title="{{ .Title }}">
                       <span class="has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span> — {{ .Title }}
                     </a>
                   </li>
