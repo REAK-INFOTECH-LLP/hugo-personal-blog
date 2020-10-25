@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="column">
+    <div class="container">
+    <div class="card">
+        {{ if .Params.HeaderImage }}    
+        <div class="card-image">
+            <figure class="image {{.Params.ImageAspectRatio}}">
+                <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
+            </figure>
+        </div>
+        {{ end }}
+        <div class="card-content">
+            <h1 class="title">{{ .Title }}</h1>
+            <div class="buttons">
+                {{ range .GetTerms "categories" }}
+                <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2" href="{{ .Permalink }}">
+                    {{ .LinkTitle | humanize }}
+                </a>
+                {{ end }}
+            </div>
+            <div class="pb-6">
+                <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</time>
+            </div>
+            <h2 class="subtitle content is-size-6">
+                {{ .Content }}
+            </h2>
+            <div class="tags">
+                <span class="pr-3">
+                    <i class="fas fa-tags"></i>
+                </span>
+                {{ range .GetTerms "tags" }}
+                <a class="tag" href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="column is-one-fifth">
+</div>
+{{ end }}

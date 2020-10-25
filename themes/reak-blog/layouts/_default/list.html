@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="column">
+    <div class="container">
+    {{ range (.Paginator .Site.Params.PaginationLimit).Pages }}
+    <div class="box">
+        <a href={{ .Permalink }}>
+            <div class="card">
+                {{ if .Params.HeaderImage }}    
+                <div class="card-image">
+                    <figure class="image {{.Params.ImageAspectRatio}}">
+                        <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
+                    </figure>
+                </div>
+                {{ end }}
+                <div class="card-content">
+                    <h3 class="title">{{ .Title }}</h3>
+                    <h4 class="subtitle content is-size-6 pt-2">
+                        {{ .Summary }}
+                    </h4>
+                    <div class="control">
+                    <div class="buttons">
+                        {{ range $cat := .Params.Categories }}
+                        <a class="button is-rounded is-small has-background-grey-dark has-text-white p-2 mt-4 mb-5">
+                            {{ $cat | humanize }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    </div>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="far fa-clock"></i> {{ .Date.Format "January 2, 2006" }}</time>
+                </div>
+            </div>
+        </a>
+    </div>
+    {{ end }}
+    {{- partial "pagination.html" . }}
+</div>
+</div>
+{{- partial "filters.html" . -}}
+{{ end }}

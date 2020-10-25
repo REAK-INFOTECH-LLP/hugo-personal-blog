@@ -1,0 +1,66 @@
+{{ $author :=  .Site.Params.Title }}
+{{ if eq .Section "posts" }}
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "name": "{{ .Title | safeJS }}",
+        "headline": "{{ .Title | safeJS }}",
+        "description": "{{ if .Description }}{{ .Description | safeJS }}{{ else }}{{if .IsPage}}{{ .Summary  }}{{ end }}{{ end }}",
+        "inLanguage": {{ .Site.LanguageCode | default "en-us" }},
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Permalink }}"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "{{ $author }}"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "{{ $author }}"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "{{ $author }}"
+        },
+        "copyrightHolder" : "{{ $author }}",
+        "copyrightYear" : "{{ .Date.Format "2006" }}",
+        "dateCreated": "{{ .Date.Format "2006-01-02T15:04:05.00Z" | safeHTML }}",
+        "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05.00Z" | safeHTML }}",
+        "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05.00Z" | safeHTML }}",
+        "publisher":{
+            "@type":"Organization",
+            "name": {{ $author }},
+            "url": {{ .Site.BaseURL }},
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ index .Site.Params.Images 0 | absURL }}",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": {{ if .Params.images }}[{{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ $e | absURL }}{{ end }}]{{ else}}{{ index .Site.Params.Images 0 | absURL }}{{ end }},
+        "url" : "{{ .Permalink }}",
+        "wordCount" : "{{ .WordCount }}",
+        "genre" : [ {{ range $index, $cat := .Params.categories }}{{ if $index }}, {{ end }}"{{ $cat }}" {{ end }}],
+        "keywords" : [ {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}"{{ $tag }}" {{ end }}]
+    }
+</script>
+{{ else }}
+{{ $title := print .Site.Title " | " .Title }}
+{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "{{ $title }}",
+        "url": "{{ .Site.BaseURL }}",
+        "description": "{{ .Site.Params.Description }}",
+        "thumbnailUrl": "{{ index .Site.Params.Images 0 | absURL }}",
+        "license": "{{ $author }}"
+    }
+</script>
+
+{{ end }}

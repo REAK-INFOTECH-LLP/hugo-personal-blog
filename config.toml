@@ -1,4 +1,62 @@
-baseURL = "http://example.org/"
+baseURL = "https://reak-infotech-llp.github.io/hugo-personal-blog/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Personal Blog"
 theme = "reak-blog"
+enableRobotsTXT = "true"
+googleAnalytics = "UA-123-45"
+
+[taxonomies]
+year = "year"
+month = "month"
+tags = "tags"
+categories = "categories"
+series = "series"
+
+[permalinks]
+post = "/:year/:month/:slug/"
+year = "/:slug/"
+month = "/:slug/"
+tags = "/tag/:slug"
+categories = "/category/:slug"
+
+[params]
+title = "John Doe"
+description = "Personal Blog of John Doe"
+images = ["https://bulma.io/images/placeholders/128x128.png"]
+paginationLimit = "2"
+maxPostsHomePage = "100"
+
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    pre = "about"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 3
+  [[menu.main]]
+    name = "Archive"
+    pre = "archive"
+    url = "/archive/"
+    weight = 4
+  [[menu.social]]
+    name = "linkedin"
+    url = "https://reak.in"
+  [[menu.social]]
+    name = "github"
+    url = "https://reak.in"
+  [[menu.social]]
+    name = "twitter"
+    url = "https://reak.in"
+  [[menu.social]]
+    name = "facebook"
+    url = "https://reak.in"

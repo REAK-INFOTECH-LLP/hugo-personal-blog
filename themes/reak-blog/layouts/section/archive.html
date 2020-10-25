@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <div class="column">
+      <div class="card">
+        <div class="card-content">
+      <h1 class="title is-2">{{.Title}}</h1>
+      {{ $type := .Type }}
+      {{ $.Scratch.Set "count" 1 }}
+        {{ range (.Site.RegularPages.GroupByDate "2006") }}
+          {{ if (gt .Key 2000) }}
+            {{ range (where .Pages "Type" "posts") }}
+              {{ if (eq ($.Scratch.Get "count") 1) }}
+                {{ $.Scratch.Set "count" 0 }}
+                <div class="pl-6">
+                <h1 class="title is-4 has-text-weight-normal">{{ .Date.Format "2006" }}</h1>
+              {{ end }}
+            {{ end }}
+            {{ $.Scratch.Set "count" 1 }}
+              <ul class="article__list pl-6">
+              {{ range (where .Pages "Type" "posts") }}
+                {{ if (ne .Params.hidden true) }}
+                  <li>
+                    <a class="is-block" href="{{ .RelPermalink }}">
+                      <span class="has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span> — {{ .Title }}
+                    </a>
+                  </li>
+                {{ end }}
+              {{ end }}
+              </ul>
+            </div>
+            <br>
+        {{ end }}
+      {{ end }}
+    </div>
+    </div>
+  </div>
+  <div class="column is-one-fifth"></div>
+{{ end }}
