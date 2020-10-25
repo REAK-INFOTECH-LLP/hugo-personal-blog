@@ -1,4 +1,13 @@
-<footer class="footer is-clickable">
+<footer class="footer is-clickable  is-hidden-tablet">
+    <div class="level mt-6 is-size-3 is-mobile">
+        {{ range .Site.Menus.social }}
+        <div class="level-item has-text-centered">
+            <a href={{.URL}} target="_blank" class="has-text-grey-dark">
+                <i class="fab fa-{{ .Name }}"></i>
+            </a>
+        </div>
+        {{ end }}
+    </div>
     <div class="content has-text-centered">
         <p class="">
             <a href="https://reak.in" class="has-text-grey-dark">Crafted with <i class="fa fa-heart has-text-danger-dark"></i> @ REAK</a>
