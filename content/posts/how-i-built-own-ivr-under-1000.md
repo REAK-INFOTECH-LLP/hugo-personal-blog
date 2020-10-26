@@ -116,7 +116,7 @@ My Asterisk box was perfectly synced with Wings SIP Server, all incoming calls g
 \
 \
 \
-**Now you might ask ?, This is all good but how can I replicate this on my end ?, Where is the code ?**
+**Now you might ask, This is all good but how can I replicate this on my end ?, Where is the code ?**
 
 Unfortunately I decided to not share the code because it affects my setup if people started exploiting the service for robocalls and spam, and this amazing service gets reduced to nothing. 
 
