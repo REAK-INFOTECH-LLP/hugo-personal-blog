@@ -1,0 +1,35 @@
+<style>
+    .menu-icons-left{
+        position:absolute;
+        padding-top: 1rem;
+        left: 1rem;
+    }
+
+    .menu{
+        position:absolute;
+        width: 0%;
+        height: 100vh;
+        background-color: #4a4a4a;
+        border-radius: 0rem 2rem 2rem 0rem;
+        z-index: 2;
+        transition:all 0.2s linear;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .menu.show {
+        width: 80%;
+    }
+</style>
+<div class="container is-hidden-tablet">
+    <div id="mobile-menu" class="menu-icons-left">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+<div id="menu" class="menu has-text-white">
+    <div class="has-text-right pr-5 pt-2">
+        <span id="close-menu">
+            <i class="fas fa-times is-size-4"></i>
+        </span>
+    </div>
+</div>
