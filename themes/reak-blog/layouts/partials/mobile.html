@@ -1,35 +1,45 @@
-<style>
-    .menu-icons-left{
-        position:absolute;
-        padding-top: 1rem;
-        left: 1rem;
-    }
-
-    .menu{
-        position:absolute;
-        width: 0%;
-        height: 100vh;
-        background-color: #4a4a4a;
-        border-radius: 0rem 2rem 2rem 0rem;
-        z-index: 2;
-        transition:all 0.2s linear;
-        left: 0;
-        overflow: hidden;
-    }
-
-    .menu.show {
-        width: 80%;
-    }
-</style>
 <div class="container is-hidden-tablet">
-    <div id="mobile-menu" class="menu-icons-left">
+    <div id="mobile-menu-show" class="menu-icons-left">
         <i class="fas fa-bars"></i>
     </div>
 </div>
-<div id="menu" class="menu has-text-white">
+<div id="mobile-menu" class="mobile-menu has-text-black">
     <div class="has-text-right pr-5 pt-2">
-        <span id="close-menu">
+        <span id="mobile-menu-close">
             <i class="fas fa-times is-size-4"></i>
         </span>
+    </div>
+    <div class="menu-content">
+        <span class="is-size-1">Menu</span>
+        <aside class="menu">
+            <ul class="menu-list">
+                {{ range .Site.Menus.main }}
+                <li class="is-size-5 has-text-justified"><a href="{{.URL | safeHTML}}">
+                        {{ if eq .Name "Home" }}<i class="fas fa-home"></i>{{ end }}
+                        {{ if eq .Name "About" }}<i class="far fa-address-card"></i>{{ end }}
+                        {{ if eq .Name "Contact" }}<i class="far fa-envelope"></i>{{ end }}
+                        {{ if eq .Name "Archive" }}<i class="fas fa-archive"></i>{{ end }}
+                        <span class="pl-2 is-5">{{.Name | safeHTML}}</span></a></li>
+                {{ end }}
+            </ul>
+        </aside>
+        <div class="mobile-menu-filters">
+            <span class="title is-5">Posts by Year</span>
+            <div class="buttons">
+                {{ range .Site.Taxonomies.year }}
+                <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey has-text-white" title="{{ .Page.Title }}">
+                    <span>{{ .Page.Title }}</span>
+                </a>
+                {{end}}
+            </div>
+            <span class="title is-5">Posts by Category</span>
+            <div class="buttons">
+                {{ range .Site.Taxonomies.categories }}
+                <a href="{{ .Page.RelPermalink }}" class="button is-rounded has-background-grey-dark has-text-white" title="{{ .Page.Title | humanize }}">
+                    <span>{{ .Page.Title | humanize }}</span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
     </div>
 </div>
