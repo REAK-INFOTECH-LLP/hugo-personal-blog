@@ -1,1 +1,10 @@
+<script>
+    document.getElementById("mobile-menu-show").addEventListener("click", function(){
+        document.getElementById("mobile-menu").classList.add("show");
+    });
+
+    document.getElementById("mobile-menu-close").addEventListener("click", function(){
+        document.getElementById("mobile-menu").classList.remove("show");
+    });
+</script>
 {{ template "_internal/google_analytics_async.html" . }}
