@@ -31,7 +31,7 @@
                     {{ end }}
                 </ul>
             </aside>
-            <div class="level mt-6 is-size-3 is-hidden-mobile">
+            <div class="level mt-5 is-size-3 is-hidden-mobile">
                 {{ range .Site.Menus.social }}
                 <div class="level-item has-text-centered">
                     <a href={{.URL}} target="_blank" class="has-text-grey-dark" rel="noreferrer" title="{{ .Name }} profile">
@@ -40,7 +40,7 @@
                 </div>
                 {{ end }}
             </div>
-            <div class="content has-text-centered mt-6 is-hidden-mobile">
+            <div class="content has-text-centered mt-5 is-hidden-mobile">
                 <p class="">
                     <a href="https://reak.in" class="has-text-grey-dark" title="crafted with love at reak infotech llp">Crafted with <i class="fa fa-heart has-text-danger-dark"></i> @ REAK</a>
                     <br /><i class="far fa-copyright"></i> {{ now.Format "2006" }} - {{ .Site.Params.Title }}
