@@ -5,7 +5,7 @@
 
 body {
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
     background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
 }
@@ -19,6 +19,31 @@ body {
 .sticky {
     position: fixed;
     width: inherit;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.site-title{
+    padding-top: 8%;
+}
+
+.site-description{
+    padding-top: 4%;
+}
+
+.desktop-menu{
+    padding-top: 5%;
+}
+
+.social-icons{
+    padding-top: 10%;
+}
+
+.copyright{
+    padding-top: 8%;
+}
+
+.filter-category{
+    padding-top: 10%;
 }
 
 // Mobile Menu
