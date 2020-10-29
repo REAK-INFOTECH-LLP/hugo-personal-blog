@@ -1,50 +1,65 @@
-<div class="column is-one-fifth">
-    <div class="container has-text-centered sticky">
-        <figure class="image is-128x128 is-inline-block mb-6">
-            <img class="is-rounded" alt="{{.Site.Params.title}} Avatar"
-                                    src="{{index .Site.Params.Images 0}}">
-        </figure>
-        {{ if eq .Section "posts" }}
-        <!--
-            Okay, so what I am trying to do here is basically change the left panel header config when in single blog post view mode,
-            as for SEO it should tag what's there in the blog rather than what the website is called.
-        -->
-        <h3 class="title is-2">{{.Site.Params.title}}</h3>
-        <h4 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h4>
-        {{ else }}
-        <!--
-            When not in single view mode, it's a group of blog posts that are being showcased and since there cannot be multiple h1,
-            I am changing primary headings to website title and description
-        -->
-        <h1 class="title is-2">{{.Site.Params.title}}</h1>
-        <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h2>
-        {{ end }}
-        <aside class="menu">
-            <ul class="menu-list">
-                {{ range .Site.Menus.main }}
-                <li class="is-size-5 has-text-justified"><a href="{{.URL | safeHTML}}">
-                        {{ if eq .Name "Home" }}<i class="fas fa-home"></i>{{ end }}
-                        {{ if eq .Name "About" }}<i class="far fa-address-card"></i>{{ end }}
-                        {{ if eq .Name "Contact" }}<i class="far fa-envelope"></i>{{ end }}
-                        {{ if eq .Name "Archive" }}<i class="fas fa-archive"></i>{{ end }}
-                        <span class="pl-2 is-5">{{.Name | safeHTML}}</span></a></li>
-                {{ end }}
-            </ul>
-        </aside>
-        <div class="level mt-6 is-size-3 is-hidden-mobile">
-            {{ range .Site.Menus.social }}
-            <div class="level-item has-text-centered">
-                <a href={{.URL}} target="_blank" class="has-text-grey-dark">
-                    <i class="fab fa-{{ .Name }}"></i>
-                </a>
-            </div>
+<div class="column is-one-fifth is-hidden-mobile">
+        <div class="has-text-centered sticky">
+            <figure class="image is-128x128 is-inline-block mb-6">
+                <img loading="lazy" class="is-rounded" alt="{{.Site.Params.title}} Avatar"
+                                        src="{{index .Site.Params.Images 0}}">
+            </figure>
+            {{ if .IsHome }}
+            <!--
+                Okay, so what I am trying to do here is basically change the left panel header config when in single blog post view mode,
+                as for SEO it should tag what's there in the blog rather than what the website is called.
+            -->
+            <h1 class="title is-3">{{.Site.Params.title}}</h1>
+            <h2 class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</h2>
+            {{ else }}
+            <!--
+                When not in single view mode, it's a group of blog posts that are being showcased and since there cannot be multiple h1,
+                I am changing primary headings to website title and description
+            -->
+            <p class="title is-3">{{.Site.Params.title}}</p>
+            <p class="subtitle is-4 mb-6 mt-2">{{.Site.Params.Description}}</p>
             {{ end }}
+            <aside class="menu">
+                <ul class="menu-list">
+                    {{ range .Site.Menus.main }}
+                    <li class="is-size-5 has-text-justified"><a href="{{.URL | safeHTML}}">
+                            {{ if eq .Name "Home" }}<i class="fas fa-home"></i>{{ end }}
+                            {{ if eq .Name "About" }}<i class="far fa-address-card"></i>{{ end }}
+                            {{ if eq .Name "Contact" }}<i class="far fa-envelope"></i>{{ end }}
+                            {{ if eq .Name "Archive" }}<i class="fas fa-archive"></i>{{ end }}
+                            <span class="pl-2 is-5">{{.Name | safeHTML}}</span></a></li>
+                    {{ end }}
+                </ul>
+            </aside>
+            <div class="level mt-5 is-size-3 is-hidden-mobile">
+                {{ range .Site.Menus.social }}
+                <div class="level-item has-text-centered">
+                    <a href={{.URL}} target="_blank" class="has-text-grey-dark" rel="noreferrer" title="{{ .Name }} profile">
+                        <i class="fab fa-{{ .Name }}"></i>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            <div class="content has-text-centered mt-5 is-hidden-mobile">
+                <p class="">
+                    <a href="https://reak.in" class="has-text-grey-dark" title="crafted with love at reak infotech llp">Crafted with <i class="fa fa-heart has-text-danger-dark"></i> @ REAK</a>
+                    <br /><i class="far fa-copyright"></i> {{ now.Format "2006" }} - {{ .Site.Params.Title }}
+                </p>
+            </div>
         </div>
-        <div class="content has-text-centered mt-6 is-hidden-mobile">
-            <p class="">
-                <a href="https://reak.in" class="has-text-grey-dark">Crafted with <i class="fa fa-heart has-text-danger-dark"></i> @ REAK</a>
-                <br /><i class="far fa-copyright"></i> {{ now.Format "2006" }} - {{ .Site.Params.Title }}
-            </p>
+</div>
+<!-- Mobile Style -->
+<div class="container column is-hidden-tablet">
+    <div class="columns is-mobile">
+        <div class="column">
+            <figure class="image is-128x128">
+                <img loading="lazy" class="is-rounded" alt="{{.Site.Params.title}} Avatar"
+                                        src="{{index .Site.Params.Images 0}}">
+            </figure>
+        </div>
+        <div class="column has-text-left">
+            <p class="title is-4">{{.Site.Params.title}}</p>
+            <p class="subtitle is-6 mt-2">{{.Site.Params.Description}}</p>
         </div>
     </div>
 </div>
