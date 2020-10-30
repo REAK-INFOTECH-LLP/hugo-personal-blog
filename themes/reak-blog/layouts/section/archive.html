@@ -15,14 +15,49 @@
               {{ end }}
             {{ end }}
             {{ $.Scratch.Set "count" 1 }}
-              <ul class="article__list pl-6">
+              <div class="columns pl-6">
               {{ range (where .Pages "Type" "posts") }}
                 {{ if (ne .Params.hidden true) }}
-                  <li>
+                  <!-- <li>
                     <a class="is-block" href="{{ .RelPermalink }}">
                       <span class="has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span> — {{ .Title }}
                     </a>
-                  </li>
+                  </li> -->
+                  <!-- <div class="columns"> -->
+                    <div class="column">
+                    <div class="card">
+                      {{ if .Params.HeaderImage }}    
+                      <div class="card-image">
+                          <figure class="image is-4by3">
+                              <img src="{{index .Params.Images 0}}" alt="{{ .Params.ImageDesc }}">
+                          </figure>
+                      </div>
+                      {{ end }}
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">{{ .Title }}</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          {{ .Summary }}
+                          <br/>
+                          <br/>
+                          <time><i class="far fa-clock mr-2"></i>{{ .Date.Format "02 Jan"}}</time>
+                        </div>
+                        <div class="control">
+                          <div class="buttons">
+                              {{ range .GetTerms "categories" }}
+                              <a class="button is-rounded is-small has-background-grey-dark has-text-white" href="{{ .Permalink }}">
+                                  {{ .LinkTitle | humanize }}
+                                  </a>
+                              {{ end }}
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+                  <!-- </div> -->
                 {{ end }}
               {{ end }}
               </ul>
@@ -30,8 +65,8 @@
             <br>
         {{ end }}
       {{ end }}
+        </div>
     </div>
     </div>
-  </div>
   <div class="column is-one-fifth"></div>
 {{ end }}
