@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Personal Blog</title>
+    <link>https://reak-infotech-llp.github.io/hugo-personal-blog/tags/</link>
+    <description>Recent content in Tags on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 22:44:06 +0530</lastBuildDate><atom:link href="https://reak-infotech-llp.github.io/hugo-personal-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>first</title>
+      <link>https://reak-infotech-llp.github.io/hugo-personal-blog/tag/first/</link>
+      <pubDate>Mon, 05 Oct 2020 22:44:06 +0530</pubDate>
+      
+      <guid>https://reak-infotech-llp.github.io/hugo-personal-blog/tag/first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sample</title>
+      <link>https://reak-infotech-llp.github.io/hugo-personal-blog/tag/sample/</link>
+      <pubDate>Mon, 05 Oct 2020 22:44:06 +0530</pubDate>
+      
+      <guid>https://reak-infotech-llp.github.io/hugo-personal-blog/tag/sample/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

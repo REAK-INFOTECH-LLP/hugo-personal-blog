@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contact on Personal Blog</title>
+    <link>https://reak-infotech-llp.github.io/hugo-personal-blog/contact/</link>
+    <description>Recent content in Contact on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://reak-infotech-llp.github.io/hugo-personal-blog/contact/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
