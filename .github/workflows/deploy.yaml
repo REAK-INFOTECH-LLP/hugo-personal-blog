@@ -32,7 +32,7 @@ jobs:
       # Install NodeJS
       - uses: actions/setup-node@v1
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       # Install Dependencies
       - run: npm install
       # Build CSS from SCSS
@@ -41,12 +41,12 @@ jobs:
       # Install Go
       - uses: actions/setup-go@v2
         with:
-          go-version: $GO_VERSION
+          go-version: ${{env.GO_VERSION}}
 
       # Install Hugo
       - name: Install Hugo
         run: |
-          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.deb
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{env.HUGO_VERSION}}/hugo_${{env.HUGO_VERSION}}_Linux-64bit.deb
           sudo dpkg -i hugo.deb
           rm -rf hugo.deb
           hugo -d website
@@ -54,7 +54,7 @@ jobs:
       # Deploy to gh-pages branch
       - name: Deploy to Pages
         run: |
-          echo $DOMAIN > website/CNAME
+          echo ${{env.DOMAIN}} > website/CNAME
           git add website/
           git config user.name github-actions
           git config user.email github-actions@github.com
