@@ -1,4 +1,4 @@
-![Build Status](https://api.travis-ci.org/eclipsed-ninja/personal-website.svg?branch=main)
+![WebsiteDeploy](https://github.com/eclipsed-ninja/personal-website/workflows/WebsiteDeploy/badge.svg)
 # Personal Blogging App
 Setup your own personal blog harnessing the power of static websites generator like Hugo and manage it through Github.
 Just fork the repository, setup Travis and enable Github Pages to get your own blog in minutes.
