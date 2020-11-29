@@ -1,0 +1,50 @@
+name: WebsiteDeploy
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  website-deploy:
+    # Name the Job
+    name: Deploy to Github Pages
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - uses: actions/checkout@v2
+
+      # Install NodeJS
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      # Install Dependencies
+      - run: npm install
+      # Build CSS from SCSS
+      - run: npm run css-build
+      
+      # Install Go
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.15.5'
+
+      # Install Hugo
+      - name: Install Hugo
+        run: |
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.deb
+          sudo dpkg -i hugo.deb
+          rm -rf hugo.deb
+          hugo -d website
+
+      # Deploy to gh-pages branch
+      - name: Deploy to Pages
+        run: |
+          echo "ashishsaxena.net" > website/CNAME
+          git add website/
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m "deploy"
+          git subtree split --prefix website -b gh-pages
+          git push -f origin gh-pages:gh-pages
