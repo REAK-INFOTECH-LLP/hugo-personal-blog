@@ -51,10 +51,15 @@ jobs:
           rm -rf hugo.deb
           hugo -d website
 
+      # Set Custom Domain Name
+      - if: ${{env.CUSTOM_DOMAIN}}
+        name: Set Custom Domain
+        run: echo ${{env.DOMAIN}} > website/CNAME
+
+
       # Deploy to gh-pages branch
       - name: Deploy to Pages
         run: |
-          echo ${{env.DOMAIN}} > website/CNAME
           git add website/
           git config user.name github-actions
           git config user.email github-actions@github.com
