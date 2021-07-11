@@ -1,0 +1,20 @@
+---
+title: "Fuck Emojis"
+description: "Why the fuck does anyone want to use emoji in code ?"
+date: 2021-07-11T00:00:00+05:30
+headerImage: true
+imageAspectRatio: "is-16by9"
+images: ["images/fuck-emojis.jpg"]
+imageDesc: "Emojis are shit"
+draft: true
+year: "2021"
+month: "2021/02"
+categories: ["Tech", "Rants"]
+tags: ["tech","programming","idiotJsDevelopers"]
+---
+
+I wasted 2 hours of my life because of a fucking emoji embedded in one of the libraries
+
+<!--more-->
+
+
