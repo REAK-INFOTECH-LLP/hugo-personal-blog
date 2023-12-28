@@ -2,12 +2,12 @@
 title: "The Era of Simulators and Gaming PCs"
 description: "Everyone should have a gaming PC, and simulators have everything to do
 with it"
-date: 2023-09-18T00:00:00+05:30
+date: 2023-12-28T09:30:00+05:30
 headerImage: true
 imageAspectRatio: "is-16by9"
 images: ["images/the-era-of-simulators/cover.jpg"]
 imageDesc: "Car Racing Simulator"
-draft: true
+draft: false
 year: "2021"
 month: "2021/02"
 categories: ["Tech", "Thoughts"]
@@ -29,9 +29,9 @@ Now, let's compare this to the world of simulator racing. The average cost of bu
 
 ## Bridging the Gap: Theory vs. Practice
 
-Undoubtedly, theory can only take you so far, and the practical experience of being on a real racetrack, handling a genuine car, and feeling the actual g-forces on your body is invaluable. However, as the costs associated with real-world racing continue to rise, it begs the question of whether these experiences remain justified for aspiring racers.
+Undoubtedly, theory can only take you so far, and the practical experience of being on a real racetrack, handling an actual car, and feeling the g-forces on your body is invaluable. However, as the costs associated with real-world racing continue to rise, it begs the question of whether these experiences remain justified for aspiring racers.
 
-Here's where things get intriguing. While sim-racing can't fully replicate the visceral sensations of a physical racetrack, the underlying principles and skills development in a simulator are remarkably similar to those in the real world. If you can learn to judge a car's limits and optimize your performance in a simulator, it stands to reason that with a few laps in a real machine on a race track, you can translate those skills into reality.
+Here's where things get intriguing. While sim-racing can't fully replicate the visceral sensations of a physical racetrack, the underlying basic principles and skill development in a simulator are remarkably similar to those in the real world. If you can learn to judge a car's limits and optimize your performance in a simulator, it stands to reason that with some training in a real machine on a race track, you can translate those skills into reality in a shorter period of time.
 
 Simulators offer an accessible and cost-effective entry point for aspiring racers to hone their skills, learn the fundamentals, and gain valuable experience. In many ways, simulators serve as a training ground for motorsport enthusiasts, providing them with a competitive edge without breaking the bank.
 
@@ -42,3 +42,20 @@ The COVID-19 pandemic disrupted many aspects of our lives, but it also acted as 
 As we move forward, the golden age of simulators is poised to continue its ascent. The technology behind sim-racing hardware and software is constantly evolving, offering increasingly realistic experiences. Furthermore, the accessibility of simulators makes motorsport more inclusive, allowing individuals from diverse backgrounds to pursue their racing dreams.
 
 In conclusion, while there's no denying the allure of real-world racing, the world of simulators is providing a viable and cost-effective alternative for aspiring racers to train, compete, and develop their skills. As the simulator industry continues to flourish and attract a broader audience, we may very well be witnessing the future of motorsport where the virtual and physical worlds seamlessly coexist. So, whether you're a seasoned racer or a novice looking to break into the world of motorsport, consider taking the virtual leap—it might just be the key to unlocking your racing dreams.
+
+## Beyond Racing ..
+
+
+Simulators aren't only picking up traction in just racing, You can even learn basic flight controls and
+instruments if you're interested in learning to fly. There's so many online resources bridging the
+gap helping amateurs learn the craft and professionals to hone it.
+
+Simulators provide the perfect training environment without breaking the bank, So many new pilots
+are using simulators to train themselves on various emergency procedures and ATC communication using
+softwares such as VATSIM, X-Plane.
+
+From farming to flying a plane, there's everything for everybody.
+
+So if you're like me who really wants to learn and experience everything out there but stuck at a
+geographical location which doesn't offer it or it's an expensive hobby. Please get yourself a gaming PC and get a
+copy of the simulator software which you fancy and dive-in !
